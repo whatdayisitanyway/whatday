@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <script>
+        /*var date = new Date();
+        function getDay(){
+            window.alert(date.getMonth());
+        }*/
+
+        function hide(item, index){
+            var d = document.getElementById(item);
+            d.style.display = "none";
+        }
+
+        function tryAgain(){
+            var items = ['d1','d2','d3','d4'];
+            items.forEach(hide);
+            var item = items[Math.floor(Math.random() * items.length)];
+            
+            var x = document.getElementById(item);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            align-items: center;
+        }
+        div{
+            position:relative;
+        }
+        blockquote{
+            padding: 0px;
+        }
+    </style>
+
+    <body onload="tryAgain()">
+        <br>
+        <h4>Here at "What day is it anyway" we're commited to helping you navigate the stresses of COVID-19 and WFH by letting you know exactly what day it is.</h4><br>
+        <p>Here's what our experts are saying:</p>
+        <div id="d1", style="display: none;">
+            <center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;What day is today?&quot;<br><br>Koala bear.</p>&mdash; (wannabe) Ƀreaker of (the Ƀad) loops (@generativist) <a href="https://twitter.com/generativist/status/1247171083217686528?ref_src=twsrc%5Etfw">April 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        </div>
+        <div id="d2", style="display: none;">
+            <center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">“What day is it?”<br><br>Kangaroo</p>&mdash; (wannabe) Ƀreaker of (the Ƀad) loops (@generativist) <a href="https://twitter.com/generativist/status/1246660776548388865?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        </div>
+        <div id="d3", style="display: none;">
+            <center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;What day is it again?&quot;<br><br>Cuttlefish.</p>&mdash; (wannabe) Ƀreaker of (the Ƀad) loops (@generativist) <a href="https://twitter.com/generativist/status/1247909064106860546?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        </div>
+        <div id="d4", style="display: none;">
+            <center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;What day is it?&quot;<br><br>Platypus.</p>&mdash; (wannabe) Ƀreaker of (the Ƀad) loops (@generativist) <a href="https://twitter.com/generativist/status/1247544046400065537?ref_src=twsrc%5Etfw">April 7, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+        </div>
+        <button type="button" onclick="tryAgain()">I'm not convinced :/</button><br>
+    </body>
+</html>
